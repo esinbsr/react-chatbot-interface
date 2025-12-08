@@ -64,6 +64,14 @@
       text-transform: uppercase;
       letter-spacing: 0.04em;
       opacity: 0.75;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+
+      svg {
+        width: 22px;
+        height: 22px;
+      }
     }
 
     .typing {
@@ -105,7 +113,7 @@
     }
 
     .send-button {
-      background: $secondary-color;
+      background-color: $secondary-color;
       color: $main-color;
       padding: 0.6rem 0.7rem;
     }

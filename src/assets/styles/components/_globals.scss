@@ -15,4 +15,5 @@ body {
 .container {
   display: flex;
   gap: 4rem;
+  padding-left: calc(250px + 4rem);
 }
