@@ -1,0 +1,24 @@
+@use './colors' as *;
+
+.navigation {
+  background-color: $main-color;
+  padding: 1.5rem;
+  min-width: 250px;
+}
+
+.navigation nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.navigation p {
+  color:$off-white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.navigation p:hover {
+  color: $secondary-color;
+}

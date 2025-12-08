@@ -1,0 +1,131 @@
+@use "./colors" as *;
+
+.chat-interface {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.5rem 15rem;
+  min-height: 100vh;
+
+  .chat-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+
+    h2 {
+      font-size: 1.75rem;
+      color: $secondary-color;
+    }
+    .subtitle {
+      color: $off-white;
+      font-size: 0.95rem;
+    }
+  }
+
+  .chat-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    overflow: hidden;
+
+    .messages {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding-right: 0.25rem;
+    }
+
+    .message {
+      display: flex;
+      flex-direction: column;
+      max-width: 78%;
+      padding: 0.7rem 1rem;
+      border-radius: 10px;
+      gap: 0.35rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .message.user {
+      margin-left: auto;
+      background: $main-color;
+    }
+
+    .message.assistant {
+      margin-right: auto;
+    }
+
+    .message-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      opacity: 0.75;
+    }
+
+    .typing {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
+  }
+
+  .chat-input {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+
+    input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .icon-button,
+    .send-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.08);
+      border: none;
+      color: white;
+      padding: 0.55rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .send-button {
+      background: $secondary-color;
+      color: $main-color;
+      padding: 0.6rem 0.7rem;
+    }
+
+    .icon-button:hover,
+    .send-button:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .send-button:hover {
+      background: lighten($secondary-color, 6%);
+    }
+
+    .icon-button:active,
+    .send-button:active {
+      transform: translateY(1px);
+    }
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
